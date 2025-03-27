@@ -1,0 +1,8 @@
+<h1>Agregar Película a <%= @list.name %></h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie, collection: Movie.all, label_method: :title %>
+  <%= f.input :comment %>
+  <%= f.submit "Agregar", class: "btn btn-primary" %>
+<% end %>
+<%= link_to "Volver", list_path(@list), class: "btn btn-secondary" %>

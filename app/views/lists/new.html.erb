@@ -1,0 +1,8 @@
+<h1>Crear nueva lista</h1>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Crear", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Movie List", lists_path, class: "btn btn-secondary" %>
