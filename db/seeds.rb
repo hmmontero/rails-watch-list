@@ -9,7 +9,7 @@
 #   end
 
 puts "Cleaning database..."
-Movie.destroy_al
+Movie.destroy_all
 url = "https://tmdb.lewagon.com/movie/top_rated"
 html_doc = URI.open(url).read
 movies = JSON.parse(html_doc)["results"]
